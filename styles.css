@@ -4,6 +4,7 @@
     user-select: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
+    box-sizing: border-box;
 }
 
 .container {
@@ -24,7 +25,7 @@
     flex-wrap: wrap;
     cursor: alias;
     -webkit-box-shadow: 16px -2px 22px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 16px 0px 22px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 16px -2px 22px 0px rgba(0, 0, 0, 0.75);
     margin-right: 10px;
 }
 
@@ -75,18 +76,18 @@ li:hover {
     border-bottom: 3px groove #000000;
 }
 
-.findingSection{
+.findingSection {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.findingSection > img{
+.findingSection>img {
     width: 30px;
     height: 30px;
 }
 
-.findingSection > input{
+.findingSection>input {
     flex: 1;
     outline: none !important;
     border-radius: 15px;
@@ -95,35 +96,45 @@ li:hover {
     padding-left: 15px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 900;
+    max-width: 600px;
 }
 
-.profileInfo{
+.profileInfo {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
 }
 
-.notif{
+.notif {
     justify-self: end;
 }
-.notif > img {
-    width: 30px;
-    height: 30px;
+
+.notif>img {
+    width: 35px;
+    height: 35px;
+    cursor: grab;
 }
 
-.profilePic{
+.profilePic {
     justify-self: end;
     margin: 15px;
 }
-.profilePic > img{
+
+.profilePic>img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    cursor: grab;
 }
 
-.profileInfo > p {
+.profileInfo>p {
     font-size: 1.5rem;
     font-family: 'Quicksand', sans-serif;
+    transition: all 0.2s;
+}
+
+.profileInfo>p:hover {
+    font-weight: bold;
 }
 
 .navBar {
@@ -132,14 +143,55 @@ li:hover {
     grid-template-columns: 55% 15% 15% 15%;
     grid-template-rows: auto;
     align-content: center;
+    gap: 10px;
+    -webkit-box-shadow: 3px 8px 16px -2px rgba(0, 0, 0, 0.66);
+    box-shadow: 3px 8px 16px -2px rgba(0, 0, 0, 0.66);
 }
 
 .greetings {
+    width: 40%;
     justify-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.greetings>h1 {
-    font-size: 50px;
+.greetingPic>img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: alias;
+}
+
+.greetings>p {
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.Button {
+    align-self: center;
+    justify-self: center;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    width: 50%;
+    height: 50px;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    border: 3px groove #000000;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.Button:hover {
+    background-color: dimgray;
+    font-weight: bolder;
 }
 
 .announcement {
@@ -149,8 +201,6 @@ li:hover {
 .trending {
     grid-area: 4/3/5/4;
 }
-
-.trending>div::before {}
 
 .projects {
     grid-area: 3/2/5/3;
