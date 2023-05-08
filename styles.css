@@ -30,6 +30,7 @@
     -webkit-box-shadow: 16px -2px 22px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 16px -2px 22px 0px rgba(0, 0, 0, 0.75);
     margin-right: 10px;
+    max-width: min-content;
 }
 
 .sidebar>ul {
@@ -303,4 +304,44 @@ div>h4 {
     border: 2px outset #000000;
     border-radius: 10px;
     cursor: grab;
+}
+
+@media screen and (max-width: 1375px) {
+    li > p{
+        display: none;
+    }
+    li{
+        width: min-content;
+    }
+    h1 > p {
+        display: none;
+    }
+
+    h1{
+        width: min-content;
+    }
+    .greetings > p {
+        display: none;
+    }
+    .container{
+        grid-template-columns: fit-content(50px) 3fr 1fr;
+    }
+
+    .Button{
+        font-size: 1rem;
+        justify-self: flex-start;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .sidebar{
+        display: none;
+    }
+    .Button{
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 715px) {
+    
 }
