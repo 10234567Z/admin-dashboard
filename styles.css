@@ -406,4 +406,7 @@ div>h4 {
     .profileInfo{
         grid-template-columns: fit-content(50px);
     }
+    .projects > h3{
+        margin-left: 10px;
+    }
 }
